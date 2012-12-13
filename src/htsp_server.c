@@ -702,7 +702,7 @@ htsp_method_hello(htsp_connection_t *htsp, htsmsg_t *in)
 
   /* Capabilities */
   l = htsmsg_create_list();
-#ifdef ENABLE_TIMESHIFT
+#if ENABLE_TIMESHIFT
   htsmsg_add_str(l, NULL, "timeshift");
 #endif
   htsmsg_add_msg(r, "servercapability", l);
